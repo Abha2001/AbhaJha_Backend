@@ -29,7 +29,7 @@ while(newHeight)
 obj.count=count;
 var data= JSON.stringify(obj,null,2);
 
-fs.writeFile('values.json',data,(err)=>{
+fs.writeFileSync('values.json',data,(err)=>{
     if(err)
     {
         throw(err);
@@ -48,4 +48,4 @@ app.get('/',(req,res)=>{
 })
 
 app.listen(3000);
-console.log("servering running at port 3000");
+console.log("server running at port 3000");
